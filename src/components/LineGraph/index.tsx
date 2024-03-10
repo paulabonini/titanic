@@ -26,7 +26,7 @@ ChartJS.register(
 const LineGraph = ({ passengersData }: LineGraphProps) => {
   const filteredPassengers = passengersData
     .filter((passenger) => passenger.age !== null && passenger.fare !== null)
-    .sort((a, b) => (a.age! > b.age! ? 1 : -1)) // Filtering out null values and sorting by age
+    .sort((a, b) => (a.age! > b.age! ? 1 : -1))
 
   const ages = filteredPassengers.map((passenger) => passenger.age!)
 

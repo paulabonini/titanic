@@ -10,15 +10,12 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ onSelectVisualization }) => {
-  // Define options for the dropdown menu
   const visualizationOptions = ['Raw Table', 'Line Graph', 'Histogram']
 
-  // State to hold the selected visualization
   const [selectedVisualization, setSelectedVisualization] = useState<string>(
     visualizationOptions[0]
   )
 
-  // Event handler for when the user selects a visualization
   const handleVisualizationChange: MouseEventHandler<HTMLSpanElement> = (
     event
   ) => {

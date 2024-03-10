@@ -17,11 +17,10 @@ interface HistogramProps {
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 
 const Histogram = ({ passengersData }: HistogramProps) => {
-  const survivalsByClass: number[] = [0, 0, 0] // Initialize count for each class
-
+  const survivalsByClass: number[] = [0, 0, 0]
   passengersData.forEach((passenger) => {
     if (passenger.survived === 1) {
-      survivalsByClass[passenger.pclass - 1]++ // Increment count for the corresponding class
+      survivalsByClass[passenger.pclass - 1]++
     }
   })
 
